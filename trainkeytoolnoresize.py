@@ -18,7 +18,7 @@ if not args.mode_train and not args.mode_val:
     else:
         raise ValueError("Invalid mode specified")
 
-# Modell laden und konfigurieren
+# Model laden und konfigurieren
 model = YOLO('yolov8n-pose.pt')
 
 if args.mode_train:
@@ -34,3 +34,5 @@ if args.mode_train:
     )
 elif args.mode_val:
     model.val(data='config.yaml')
+
+

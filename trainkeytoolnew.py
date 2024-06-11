@@ -43,7 +43,7 @@ print("Keypoint shape from config:", data['kpt_shape'])
 # Bildergröße ändern
 resize_images(data['path'])
 
-# Modell laden und konfigurieren
+# Model laden und konfigurieren
 model = YOLO('yolov8n-pose.pt')
 
 # Debug-Ausgabe für den Validierungsmodus
@@ -65,3 +65,5 @@ elif args.mode_val:
     results = model.val(data='config.yaml')
     # Debug-Ausgabe der Ergebnisse
     print(results)
+
+
